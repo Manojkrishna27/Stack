@@ -4,10 +4,11 @@ def daily_temperature(arr):
     stack=[]
 
     for i in range(n):
-        while stack and arr[i]>arr[stack[-1]]:
+        while stack and arr[i]>arr[stack[-1]]: # comparing the index value
+
             previous=stack.pop()
-            res[previous]=i-previous
-        stack.append(i)
+            res[previous]=i-previous    # subtracting the index value of boh prev and now we get daily temperatue
+        stack.append(i)   # storeing the index 
 
     return res
 arr=[73,74,75,71,69,72,76,73]
